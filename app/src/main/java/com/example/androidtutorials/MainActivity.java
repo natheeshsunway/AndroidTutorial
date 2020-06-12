@@ -18,10 +18,13 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Person person=new Person("Omm","NamaShivaya");
+
                 Intent intent=new Intent();
                 intent.setAction("com.sample.intent");
                 intent.addCategory(Intent.CATEGORY_DEFAULT);
-                intent.putExtra("keyValue","Omm Nama Shivaya");
+                intent.putExtra("keyValue",person);
                 startActivity(intent);
             }
         });
